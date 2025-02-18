@@ -32,5 +32,9 @@ dependente.titular = cliente
 dependente.telefones = (cliente.telefones.map(telefone => telefone.clonar()) as Telefone[])
 cliente.dependentes.push(dependente)
 
+console.log(`\nCLIENTE`);
+console.log(`${"-".repeat(80)}`);
 console.log(cliente);
+console.log(`\nDEPENDENTE`);
+console.log(`${"-".repeat(80)}`);
 console.log(dependente);
