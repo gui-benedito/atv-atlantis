@@ -1,6 +1,6 @@
 import Processo from "../abstracoes/processo";
-import MenuTipoExcluirCliente from "../menus/menuTipoEcluirCliente";
-import ExcluirClienteTitular from "./excluirClienteTitutlar";
+import MenuTipoExcluirCliente from "../menus/menuTipoExcluirCliente";
+import ExcluirClienteTitular from "./exclusao/excluirClienteTitutlar";
 
 export default class TipoExcluirCliente extends Processo {
     constructor() {
