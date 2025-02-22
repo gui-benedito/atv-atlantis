@@ -13,7 +13,7 @@ export default class Cliente {
     private endereco!: Endereco
     private documentos: Documento[] = []
     private dependentes: Cliente[] = []
-    private titular!: Cliente
+    private titular!: Cliente | undefined | null
 
     constructor(nome: string, nomeSocial: string, dataNascimento: Date) {
         this.id = Armazem.InstanciaUnica.Clientes.length === 0 ? 1 : Armazem.InstanciaUnica.Clientes.length + 1
@@ -35,4 +35,5 @@ export default class Cliente {
     public get Titular() { return this.titular }
 
     public set Endereco(endereco: Endereco) { this.endereco = endereco }
+    public setTitular(titular: Cliente | undefined | null) { this.titular = titular }
 }
