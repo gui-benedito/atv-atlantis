@@ -7,40 +7,38 @@ import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
 import EscolherTitular from "../../funcoes/escolherTitular";
 
 export default class CadastroClienteDependente extends Processo {
-    private cliente: Cliente
-    constructor(cliente: Cliente){
+    constructor(){
         super()
-        this.cliente = cliente
     }
 
     processar(): void {
-        console.log('Iniciando o cadastro de um novo cliente dependente...')
-        let idTitular = this.entrada.receberNumero('Id do titular:')
-        let titular = EscolherTitular(idTitular)
-        if (titular !== null) {
-            let nome = this.entrada.receberTexto('Qual o nome do novo cliente?')
-            let nomeSocial = this.entrada.receberTexto('Qual o nome social do novo cliente?')
-            let dataNascimento = this.entrada.receberData('Qual a data de nascimento?')
-            let dependente = new Cliente(nome, nomeSocial, dataNascimento)
-    
-            dependente.Telefones.map(t => t.clonar() as Telefone)
-    
-            dependente.Endereco = this.cliente.Endereco.clonar() as Endereco
-    
-            this.processo = new CadastrarDocumentosCliente(dependente)
-            this.processo.processar()
+        let armazem = Armazem.InstanciaUnica
 
-            dependente.setTitular(titular)
-            titular.Dependentes.push(dependente)
-    
-            this.cliente.Dependentes.push(dependente)
-    
-            let armazem = Armazem.InstanciaUnica
-            armazem.Clientes.push(dependente)
-    
-            console.log('Finalizando o cadastro do dependente...')
+        if (armazem.Clientes.length === 0) {
+            console.log('Não há clientes titulares cadastrados...')
         } else {
-            console.log('Cliente não encontrado...')
+            let id = this.entrada.receberNumero('Id do titular:')
+            let titular = EscolherTitular(id)
+            if (titular) {
+                let nome = this.entrada.receberTexto('Qual o nome do novo cliente?')
+                let nomeSocial = this.entrada.receberTexto('Qual o nome social do novo cliente?')
+                let dataNascimento = this.entrada.receberData('Qual a data de nascimento?')
+                let dependente = new Cliente(nome, nomeSocial, dataNascimento)
+        
+                dependente.Telefones.map(t => t.clonar() as Telefone)
+        
+                dependente.Endereco = titular.Endereco.clonar() as Endereco
+        
+                this.processo = new CadastrarDocumentosCliente(dependente)
+                this.processo.processar()
+    
+                dependente.setTitular(titular)
+                titular.Dependentes.push(dependente)
+            
+                armazem.Clientes.push(dependente)
+        
+                console.log('Finalizando o cadastro do dependente...')
+            }
         }
     }
 }
