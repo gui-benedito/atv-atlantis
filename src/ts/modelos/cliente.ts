@@ -4,7 +4,6 @@ import Endereco from "./endereco"
 import Telefone from "./telefone"
 
 export default class Cliente {
-    private id: number
     private nome: string
     private nomeSocial: string
     private dataNascimento: Date
@@ -16,14 +15,12 @@ export default class Cliente {
     private titular!: Cliente | undefined | null
 
     constructor(nome: string, nomeSocial: string, dataNascimento: Date) {
-        this.id = Armazem.InstanciaUnica.Clientes.length === 0 ? 1 : Armazem.InstanciaUnica.Clientes.length + 1
         this.nome = nome
         this.nomeSocial = nomeSocial
         this.dataNascimento = dataNascimento
         this.dataCadastro = new Date()
     }
 
-    public get Id() { return this.id }
     public get Nome() { return this.nome }
     public get NomeSocial() { return this.nomeSocial }
     public get DataNascimento() { return this.dataNascimento }

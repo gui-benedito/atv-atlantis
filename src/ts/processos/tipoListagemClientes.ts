@@ -1,8 +1,9 @@
 import Processo from "../abstracoes/processo";
 import Armazem from "../dominio/armazem";
-import EscolherTitular from "../funcoes/escolherTitular";
+import EscolherCliente from "../funcoes/EscolherCliente";
 import MenuTipoListagemClientes from "../menus/menuTipoListagemClientes";
 import ListagemDependentes from "./listagem/listagemDependentes";
+import ListagemTitular from "./listagem/listagemTitular";
 import ListagemTitulares from "./listagem/listagemTitulares";
 
 export default class TipoListagemClientes extends Processo {
@@ -21,6 +22,10 @@ export default class TipoListagemClientes extends Processo {
                 break;
             case 2:
                 this.processo = new ListagemDependentes()
+                this.processo.processar()
+                break
+            case 3:
+                this.processo = new ListagemTitular()
                 this.processo.processar()
                 break
             default:

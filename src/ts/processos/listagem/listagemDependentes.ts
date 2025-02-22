@@ -1,6 +1,6 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
-import EscolherTitular from "../../funcoes/escolherTitular";
+import EscolherCliente from "../../funcoes/EscolherCliente";
 import ImpressaorCliente from "../../impressores/impressorCliente";
 import Impressor from "../../interfaces/impressor";
 import Cliente from "../../modelos/cliente";
@@ -12,8 +12,8 @@ export default class ListagemDependentes extends Processo {
     }
     processar(): void {
         console.clear()
-        let id = this.entrada.receberNumero('Id do titular:')
-        let cliente = EscolherTitular(id)
+        let documentoDependente = this.entrada.receberTexto('Documento do cliente:')
+        let cliente = EscolherCliente(documentoDependente)
         if ( cliente) {
             if (cliente.Dependentes.length > 0) {
                 console.log(`Dependentes de ${cliente.Nome}`)

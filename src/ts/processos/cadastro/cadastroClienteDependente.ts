@@ -4,7 +4,7 @@ import Cliente from "../../modelos/cliente";
 import Endereco from "../../modelos/endereco";
 import Telefone from "../../modelos/telefone";
 import CadastrarDocumentosCliente from "./cadastrarDocumentosCliente";
-import EscolherTitular from "../../funcoes/escolherTitular";
+import EscolherCliente from "../../funcoes/EscolherCliente";
 
 export default class CadastroClienteDependente extends Processo {
     constructor(){
@@ -17,8 +17,8 @@ export default class CadastroClienteDependente extends Processo {
         if (armazem.Clientes.length === 0) {
             console.log('Não há clientes titulares cadastrados...')
         } else {
-            let id = this.entrada.receberNumero('Id do titular:')
-            let titular = EscolherTitular(id)
+            let documentoDependente = this.entrada.receberTexto('Documento do dependente:')
+            let titular = EscolherCliente(documentoDependente)
             if (titular) {
                 let nome = this.entrada.receberTexto('Qual o nome do novo cliente?')
                 let nomeSocial = this.entrada.receberTexto('Qual o nome social do novo cliente?')
