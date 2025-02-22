@@ -1,12 +1,12 @@
 import Processo from "../../abstracoes/processo";
 import Armazem from "../../dominio/armazem";
-import EscolherDependente from "../../funcoes/EscolherDependente";
+import EscolherCliente from "../../funcoes/EscolherCliente";
 
 export default class ExcluirClienteDependente extends Processo {
     processar(): void {
         console.log(`Iniciando exclusão de cliente.`)
         let documentoCliente = this.entrada.receberTexto('Documento do cliente:')
-        let cliente = EscolherDependente(documentoCliente)
+        let cliente = EscolherCliente(documentoCliente)
         
         if (cliente) {
             let titular = cliente?.Titular

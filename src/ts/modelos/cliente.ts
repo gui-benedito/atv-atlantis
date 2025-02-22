@@ -33,4 +33,10 @@ export default class Cliente {
 
     public set Endereco(endereco: Endereco) { this.endereco = endereco }
     public setTitular(titular: Cliente | undefined | null) { this.titular = titular }
+    public setNome(nome: string) { this.nome = nome }
+    public setNomeSocial(nomeSocial: string) { this.nomeSocial = nomeSocial }
+    public setDataNascimento(dataNascimento: Date) { this.dataNascimento = dataNascimento }
+    public setDocumentos(documentos: Documento[]) { this.documentos = documentos}
+    public setTelefones(telefones: Telefone[]) { this.telefones = telefones}
+    public setEndereco(endereco: Endereco) { this.endereco = endereco}
 }
