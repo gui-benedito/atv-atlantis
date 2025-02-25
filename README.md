@@ -12,9 +12,9 @@ Repositório criado para atividade I de técnicas de programação.
 
     cd .\atv-atlantis\
 
-<h3>3. Altere para a branch atvII</h3>
+<h3>3. Altere para a branch atvIII</h3>
 
-    git checkout atvII
+    git checkout atvIII
 
 <h3>4. Instale as dependências </h3>
 

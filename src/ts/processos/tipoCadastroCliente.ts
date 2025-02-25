@@ -1,5 +1,4 @@
 import Processo from "../abstracoes/processo";
-import EscolherCliente from "../funcoes/EscolherCliente";
 import MenuTipoCadastroCliente from "../menus/menuTipoCadastroCliente";
 import CadastroClienteDependente from "./cadastro/cadastroClienteDependente";
 import CadastroClienteTitular from "./cadastro/cadastroClienteTitular";
