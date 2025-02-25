@@ -1,4 +1,4 @@
-# atvII
+# ATLANTIS_ATVII
 Repositório criado para atividade II de técnicas de programação II.
 
 <h1> Instalação </h1>
