@@ -8,7 +8,8 @@ export default class ImpressorHospedagem implements Impressor {
     }
 
     imprimir(): string {
-        let descricao = `Acomodação: ${this.hospedagem.getNomeHospedagem()}\n`
+        let descricao = `ID: ${this.hospedagem.getId()}\n`
+        + `Acomodação: ${this.hospedagem.getNomeHospedagem()}\n`
         + `Data de entrada: ${this.hospedagem.getDataInicio()}\n`
         + `Data de saída: ${this.hospedagem.getDataFinal()}\n`
         + `Clientes:\n`

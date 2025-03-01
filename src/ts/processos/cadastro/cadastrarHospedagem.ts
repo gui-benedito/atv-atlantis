@@ -44,7 +44,8 @@ export default class CadastrarHospedagem extends Processo {
 
         let dataInicio = this.entrada.receberData(`Data de entrada: `)
         let dataFinal  = this.entrada.receberData(`Data de saída: `)
-        let acomodacao = EscolherAcomodacao(this.nome)
+        let escolherAcomodacao = new EscolherAcomodacao()
+        let acomodacao = escolherAcomodacao.escolherAcomodacao()
 
         if (acomodacao) {
             let hospedagem = new Hospedagem(acomodacao, dataInicio, dataFinal, clientesHospedados)

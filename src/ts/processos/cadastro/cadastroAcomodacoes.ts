@@ -27,10 +27,10 @@ export default class CadastroAcomodacoes extends Processo {
         diretor = new DiretorFamiliaSimples()
         this.acomodacoes.push(diretor.construir())
 
-        diretor = new DiretorFamiliaMais()
+        diretor = new DiretorFamiliaSuper()
         this.acomodacoes.push(diretor.construir())
 
-        diretor = new DiretorFamiliaSuper()
+        diretor = new DiretorFamiliaMais()
         this.acomodacoes.push(diretor.construir())
     }
 }

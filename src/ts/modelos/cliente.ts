@@ -42,4 +42,5 @@ export default class Cliente {
     public setDocumentos(documentos: Documento[]) { this.documentos = documentos}
     public setTelefones(telefones: Telefone[]) { this.telefones = telefones}
     public setEndereco(endereco: Endereco) { this.endereco = endereco}
+    public setHospedagens(hospedagens: Hospedagem[]) { this.hospedagens = hospedagens}
 }

@@ -8,7 +8,6 @@ import EditarEndereco from "./editarEndereco";
 import EditarTelefone from "./editarTelefones";
 
 export default class EditarCliente extends Processo {
-    private impressor!: Impressor
     constructor() {
         super()
     }
