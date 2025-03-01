@@ -1,6 +1,7 @@
 import Armazem from "../dominio/armazem"
 import Documento from "./documento"
 import Endereco from "./endereco"
+import Hospedagem from "./hospedagem"
 import Telefone from "./telefone"
 
 export default class Cliente {
@@ -13,6 +14,7 @@ export default class Cliente {
     private documentos: Documento[] = []
     private dependentes: Cliente[] = []
     private titular!: Cliente | undefined | null
+    private hospedagens: Hospedagem[] = []
 
     constructor(nome: string, nomeSocial: string, dataNascimento: Date) {
         this.nome = nome
@@ -30,6 +32,7 @@ export default class Cliente {
     public get Documentos() { return this.documentos }
     public get Dependentes() { return this.dependentes }
     public get Titular() { return this.titular }
+    public get Hospedagens() { return this.hospedagens }
 
     public set Endereco(endereco: Endereco) { this.endereco = endereco }
     public setTitular(titular: Cliente | undefined | null) { this.titular = titular }

@@ -1,4 +1,4 @@
-# PL_ATVI
+# ATLANTIS_ATVIII
 Repositório criado para atividade I de técnicas de programação.
 
 <h1> Instalação </h1>

@@ -1,6 +1,6 @@
 import Menu from "../interfaces/menu";
 
-export default class MenuTipoListagemHospedagem implements Menu {
+export default class MenuTipoListagemAcomodacoes implements Menu {
     mostrar(): void {
         console.clear()
         console.log(`****************************`)
