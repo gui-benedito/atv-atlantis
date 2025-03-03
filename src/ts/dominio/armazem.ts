@@ -21,4 +21,8 @@ export default class Armazem {
         return this.hospedagens
     }
 
+    public setHospedagens(hospedagens: Hospedagem[]) {
+        this.hospedagens = hospedagens
+    }
+
 }
