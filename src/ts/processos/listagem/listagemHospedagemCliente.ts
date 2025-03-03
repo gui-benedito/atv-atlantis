@@ -14,6 +14,10 @@ export default class ListagemHospedagemCliente extends Processo {
         let cliente = EscolherCliente(documento)
         if (cliente) {
             console.clear()
+            if (cliente.Hospedagens.length === 0) {
+                console.log(`${cliente.Nome} não possui hospedagem cadastrada!`)
+                return
+            }
             console.log(`Iniciando a listagem das hospedagens de ${cliente.Nome}...`)
             console.log(`-------------------------------------------------`)
             cliente.Hospedagens.forEach(hospedagem => {

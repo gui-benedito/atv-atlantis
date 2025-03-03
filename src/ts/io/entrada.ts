@@ -4,7 +4,7 @@ export default class Entrada {
     public receberNumero(mensagem: string): number {
         let prompt = promptSync();
         let valor = prompt(`${mensagem} `)
-        let numero = new number(valor)
+        let numero = new Number(valor)
         return numero.valueOf()
     }
     public receberTexto(mensagem: string): string {
@@ -16,9 +16,9 @@ export default class Entrada {
         let prompt = promptSync();
         let texto = prompt(`${mensagem}, no padrão dd/MM/yyyy: `)
         let partes = texto.split('/')
-        let ano = new number(partes[2])
-        let mes = new number(partes[1])
-        let dia = new number(partes[0])
+        let ano = new Number(partes[2])
+        let mes = new Number(partes[1])
+        let dia = new Number(partes[0])
         let data = new Date(ano.valueOf(), mes.valueOf() - 1, dia.valueOf())
         return data
     }

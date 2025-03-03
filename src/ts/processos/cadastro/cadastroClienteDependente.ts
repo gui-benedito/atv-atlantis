@@ -17,7 +17,7 @@ export default class CadastroClienteDependente extends Processo {
         if (armazem.Clientes.length === 0) {
             console.log('Não há clientes titulares cadastrados...')
         } else {
-            let documentoDependente = this.entrada.receberTexto('Documento do dependente:')
+            let documentoDependente = this.entrada.receberTexto('Documento do titular:')
             let titular = EscolherCliente(documentoDependente)
             if (titular) {
                 let nome = this.entrada.receberTexto('Qual o nome do novo cliente?')

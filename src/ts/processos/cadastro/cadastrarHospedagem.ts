@@ -45,12 +45,15 @@ export default class CadastrarHospedagem extends Processo {
         let dataInicio = this.entrada.receberData(`Data de entrada: `)
         let dataFinal  = this.entrada.receberData(`Data de saída: `)
         let escolherAcomodacao = new EscolherAcomodacao()
-        let acomodacao = escolherAcomodacao.escolherAcomodacao()
+        let acomodacao = escolherAcomodacao.escolherAcomodacao(this.nome)
 
-        if (acomodacao) {
+        if (acomodacao != null) {
             let hospedagem = new Hospedagem(acomodacao, dataInicio, dataFinal, clientesHospedados)
             this.armazem.Hospedagens.push(hospedagem)
             clientesHospedados.map(c => c.Hospedagens.push(hospedagem))
+        } else {
+            console.log(`Acomodação não encontrada!`)
+            return
         }
 
         console.log(`Finalizando cadastro de hospedagem...`)

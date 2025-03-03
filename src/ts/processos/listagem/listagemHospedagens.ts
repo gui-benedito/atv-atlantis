@@ -15,6 +15,10 @@ export default class ListagemHospedagem extends Processo {
 
     processar(): void {
         console.clear()
+        if (this.hospedagens.length == 0) {
+            console.log(`Sem hospedagens cadastradas!`)
+            return
+        }
         console.log('Iniciando a listagem das hospedagens...')
         console.log(`-------------------------------------------------`)
         this.hospedagens.forEach(hospedagem => {
