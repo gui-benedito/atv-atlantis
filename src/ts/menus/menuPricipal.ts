@@ -2,7 +2,6 @@ import Menu from "../interfaces/menu";
 
 export default class MenuPrincipal implements Menu {
     mostrar(): void {
-        console.clear()
         console.log(`****************************`)
         console.log(`| Por favor, selecione uma opção...`)
         console.log(`----------------------`)
