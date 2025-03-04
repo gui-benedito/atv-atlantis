@@ -30,40 +30,45 @@ export default class EditarHospedagem extends Processo {
                 return
             }
 
-            let novaDataEntrada = this.entrada.receberData(`Nova data de entrada:`)
-            let novaDataSaida = this.entrada.receberData(`Nova data de saída:`)
+            this.novosClientes = [...hospedagem.getClientes()]
 
-            let opcao = this.entrada.receberTexto(`Alterar clientes?(s/n)`).toUpperCase()
-            if (opcao == 'S') {
-                let clientes = hospedagem.getClientes()
+            const excluirCliente = (clientes: Cliente[]) => {
+                let novaLista: Cliente[] = []
                 if (clientes.length > 0) {
                     clientes.forEach(cliente => {
                         console.log(cliente.Nome)
-                        opcao = this.entrada.receberTexto(`Excluir cliente?(s/n)`).toUpperCase()
+                        let opcao = this.entrada.receberTexto(`Excluir cliente?(s/n)`).toUpperCase()
     
                         if(opcao === "S") {
                             RemoverHospedagemCliente(cliente, hospedagem.getId())
                         } else {
-                            this.novosClientes.push(cliente)
+                            novaLista.push(cliente)
                         }
                     })
                 }
-
-                while(this.novosClientes.length < novaAcomodacao.Capacidade){
-                    let opcao2 = this.entrada.receberTexto(`Deseja adicionar clientes?(s/n):`).toUpperCase()
-                    if (opcao2 == 'N') {
-                        break
-                    }
-                    let documentoCliente = this.entrada.receberTexto(`Documento: `)
-                    let cliente = EscolherCliente(documentoCliente)
-                    if (cliente) {
-                        this.novosClientes.push(cliente)
-                        cliente.setHospedagens([...cliente.Hospedagens, hospedagem])
-                    }
-                }
-            } else {
-                this.novosClientes = [...hospedagem.getClientes()]
+                this.novosClientes = [...novaLista]
             }
+
+            while (this.novosClientes.length > novaAcomodacao.Capacidade) {
+                console.log(`Acomodação não comporta o número de hóspedes...`)
+                excluirCliente(this.novosClientes)
+            }
+
+            while(this.novosClientes.length < novaAcomodacao.Capacidade){
+                let opcao2 = this.entrada.receberTexto(`Deseja adicionar clientes?(s/n):`).toUpperCase()
+                if (opcao2 == 'N') {
+                    break
+                }
+                let documentoCliente = this.entrada.receberTexto(`Documento: `)
+                let cliente = EscolherCliente(documentoCliente)
+                if (cliente) {
+                    this.novosClientes.push(cliente)
+                    cliente.setHospedagens([...cliente.Hospedagens, hospedagem])
+                }
+            }
+
+            let novaDataEntrada = this.entrada.receberData(`Nova data de entrada:`)
+            let novaDataSaida = this.entrada.receberData(`Nova data de saída:`)
 
             hospedagem.setAcomodacao(novaAcomodacao)
             hospedagem.setDataInicio(novaDataEntrada)
