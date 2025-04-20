@@ -1,0 +1,6 @@
+@import url('../../index.css');
+
+.main_container {
+    padding: 1rem;
+    background-color: var(--bege);
+}

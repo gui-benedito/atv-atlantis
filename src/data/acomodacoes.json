@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "Nome": "Casal Simples",
+      "Cama solteiro": 0,
+      "Cama casal": 1,
+      "Suíte": 1,
+      "Climatização": "Sim",
+      "Garagem": 1,
+      "img": "./assets/casal_simples.webp"
+    },
+    {
+      "id": 2,
+      "Nome": "Família Simples",
+      "Cama solteiro": 2,
+      "Cama casal": 1,
+      "Suíte": 1,
+      "Climatização": "Sim",
+      "Garagem": 1,
+      "img": "./assets/familia_simples.webp"
+    },
+    {
+      "id": 3,
+      "Nome": "Família Mais",
+      "Cama solteiro": 5,
+      "Cama casal": 1,
+      "Suíte": 2,
+      "Climatização": "Sim",
+      "Garagem": 2,
+      "img": "./assets/familia_mais.webp"
+    },
+    {
+      "id": 4,
+      "Nome": "Família Super",
+      "Cama solteiro": 6,
+      "Cama casal": 2,
+      "Suíte": 3,
+      "Climatização": "Sim",
+      "Garagem": 2,
+      "img": "./assets/familia_super.webp"
+    },
+    {
+      "id": 5,
+      "Nome": "Solteiro Simples",
+      "Cama solteiro": 1,
+      "Cama casal": 0,
+      "Suíte": 1,
+      "Climatização": "Sim",
+      "Garagem": 0,
+      "img": "./assets/solteiro_simples.webp"
+    },
+    {
+      "id": 6,
+      "Nome": "Solteiro Mais",
+      "Cama solteiro": 0,
+      "Cama casal": 1,
+      "Suíte": 1,
+      "Climatização": "Sim",
+      "Garagem": 1,
+      "img": "./assets/solteiro_mais.webp"
+    }
+  ]
+  

@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "Nome": "João Silva",
+    "NomeSocial": "Joãozinho",
+    "DataNascimento": "1990-05-15",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "123456789"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua A",
+      "Bairro": "Centro",
+      "Cidade": "Cidade X",
+      "Estado": "Estado Y",
+      "Pais": "Brasil",
+      "CodigoPostal": "12345-678"
+    },
+    "Documentos": [
+      {
+        "tipo": "RG",
+        "numero": "123456789"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+    "id": 2,
+    "Nome": "Maria Oliveira",
+    "NomeSocial": "Mari",
+    "DataNascimento": "1985-09-20",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "21",
+        "Numero": "987654321"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua B",
+      "Bairro": "Bairro Y",
+      "Cidade": "Cidade Z",
+      "Estado": "Estado W",
+      "Pais": "Brasil",
+      "CodigoPostal": "23456-789"
+    },
+    "Documentos": [
+      {
+        "tipo": "CPF",
+        "numero": "123.456.789-00"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+    "id": 3,
+    "Nome": "Carlos Pereira",
+    "NomeSocial": "Carlinhos",
+    "DataNascimento": "1992-03-10",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "1122334455"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua C",
+      "Bairro": "Bairro A",
+      "Cidade": "Cidade P",
+      "Estado": "Estado Q",
+      "Pais": "Brasil",
+      "CodigoPostal": "34567-890"
+    },
+    "Documentos": [
+      {
+        "tipo": "RG",
+        "numero": "987654321"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+    "id": 4,
+    "Nome": "Ana Pereira",
+    "NomeSocial": "Aninha",
+    "DataNascimento": "2015-06-25",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [],
+    "Endereco": {
+      "Rua": "Rua C",
+      "Bairro": "Bairro A",
+      "Cidade": "Cidade P",
+      "Estado": "Estado Q",
+      "Pais": "Brasil",
+      "CodigoPostal": "34567-890"
+    },
+    "Documentos": [],
+    "Dependentes": [],
+    "Titular": "Carlos Pereira",
+    "Reservas": []
+  },
+  {
+      "id": 5,
+    "Nome": "Ana Costa",
+    "NomeSocial": "Aninha",
+    "DataNascimento": "1994-11-05",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "31",
+        "Numero": "9988776655"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua D",
+      "Bairro": "Bairro B",
+      "Cidade": "Cidade F",
+      "Estado": "Estado M",
+      "Pais": "Brasil",
+      "CodigoPostal": "45678-901"
+    },
+    "Documentos": [
+      {
+        "tipo": "CPF",
+        "numero": "987.654.321-00"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+      "id": 6,
+    "Nome": "Ricardo Santos",
+    "NomeSocial": "Ricardinho",
+    "DataNascimento": "1988-12-30",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "1198765432"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua E",
+      "Bairro": "Bairro X",
+      "Cidade": "Cidade Y",
+      "Estado": "Estado Z",
+      "Pais": "Brasil",
+      "CodigoPostal": "56789-012"
+    },
+    "Documentos": [
+      {
+        "tipo": "RG",
+        "numero": "112233445"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+      "id": 7,
+    "Nome": "Fernanda Lima",
+    "NomeSocial": "Nanda",
+    "DataNascimento": "1999-01-14",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "1199922113"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua F",
+      "Bairro": "Bairro C",
+      "Cidade": "Cidade T",
+      "Estado": "Estado V",
+      "Pais": "Brasil",
+      "CodigoPostal": "67890-123"
+    },
+    "Documentos": [
+      {
+        "tipo": "CPF",
+        "numero": "321.654.987-00"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": "Ricardo Santos",
+    "Reservas": []
+  },
+  {
+      "id": 8,
+    "Nome": "Paula Martins",
+    "NomeSocial": "Paulinha",
+    "DataNascimento": "1995-07-22",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "1187654321"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua G",
+      "Bairro": "Bairro F",
+      "Cidade": "Cidade W",
+      "Estado": "Estado X",
+      "Pais": "Brasil",
+      "CodigoPostal": "78901-234"
+    },
+    "Documentos": [
+      {
+        "tipo": "RG",
+        "numero": "564738291"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+      "id": 9,
+    "Nome": "Luiz Souza",
+    "NomeSocial": "Luizinho",
+    "DataNascimento": "1980-04-12",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "21",
+        "Numero": "1239876543"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua H",
+      "Bairro": "Bairro G",
+      "Cidade": "Cidade M",
+      "Estado": "Estado N",
+      "Pais": "Brasil",
+      "CodigoPostal": "89012-345"
+    },
+    "Documentos": [
+      {
+        "tipo": "CPF",
+        "numero": "987.123.654-00"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  },
+  {
+    "id": 10,
+    "Nome": "Beatriz Ferreira",
+    "NomeSocial": "Bia",
+    "DataNascimento": "1992-06-15",
+    "DataCadastro": "2025-03-30",
+    "Telefones": [
+      {
+        "Ddd": "11",
+        "Numero": "1198989898"
+      }
+    ],
+    "Endereco": {
+      "Rua": "Rua I",
+      "Bairro": "Bairro H",
+      "Cidade": "Cidade L",
+      "Estado": "Estado P",
+      "Pais": "Brasil",
+      "CodigoPostal": "90123-456"
+    },
+    "Documentos": [
+      {
+        "tipo": "RG",
+        "numero": "435675894"
+      },
+      {
+        "tipo": "CPF",
+        "numero": "44060582818"
+      }
+    ],
+    "Dependentes": [],
+    "Titular": null,
+    "Reservas": []
+  }
+]
+  
