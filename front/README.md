@@ -12,9 +12,13 @@ Repositório criado para atividades de técnicas de programação II.
 
     cd .\atv-atlantis\
 
-<h3>3. Altere para a branch atvIV</h3>
+<h3>3. Altere para a branch atvV</h3>
 
-    git checkout atvIV
+    git checkout atvV
+
+<h3>2. Navegue até o diretório raiz de front </h3>
+
+    cd .\front\
 
 <h3>4. Instale as dependências </h3>
 
