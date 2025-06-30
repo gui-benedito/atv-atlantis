@@ -1,0 +1,142 @@
+@import url('../../../index.css');
+
+.acomodacao_container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.card_container {
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, .05);
+    transition: transform .3s ease;
+    row-gap: .5rem;
+}
+
+.card_container:hover {
+    transform: scale(1.02);
+}
+
+.main_infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.more_infos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.main_infos_first_column {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 1rem;
+}
+
+.icons {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+.icon {
+    cursor: pointer;
+}
+
+.spanStrong {
+    font-weight: 600;
+}
+
+.button_container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.link_editar {
+    display: flex;
+    align-items: center;
+}
+
+.cliente_form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    padding-left: 5rem;
+}
+
+.cliente_form input {
+    border-radius: .5rem;
+    padding: .5rem;
+    border: 1px solid #2681AE;
+}
+.cliente_form input:focus {
+    outline: none;
+    border: 1px solid #2681AE;
+}
+
+.cliente_form label {
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+.form_column {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.form_button {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    position: fixed;   /* Tornando a paginação fixa na tela */
+    bottom: 20px;      /* Afastando um pouco da parte inferior */
+    width: 100%;       /* Fazendo com que ocupe toda a largura */
+    left: 0;           /* Garantindo que fique alinhado à esquerda */
+    z-index: 10;       /* Garantindo que a paginação apareça acima de outros elementos */
+    padding: 0 10px;   /* Adicionando um pequeno espaçamento lateral */
+}
+
+.pagination button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: .3rem;
+    background-color: var(--off-white);
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.pagination .activePage {
+    background-color: var(--blue);
+    color: white;
+}
