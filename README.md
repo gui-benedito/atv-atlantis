@@ -18,4 +18,5 @@
 
 ## Execute:
 
-    npm run start
+    tsc
+    node ./js/teste/index.js
