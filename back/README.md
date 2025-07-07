@@ -3,6 +3,7 @@ Repositório criado para atividades de técnicas de programação II.
 
 <h1> Instalação </h1>
   Procedimentos para rodar a aplicação
+  Criar uma base de dados chamada 'atlantis'
 
 <h3>1. Clone o repositório</h3>
 
@@ -22,7 +23,7 @@ Repositório criado para atividades de técnicas de programação II.
 
 <h3>4. Instale as dependências </h3>
 
-    npm install --legacy-peer-deps
+    npm install
 
 <h3>5. Rode a aplicação </h3>
     
