@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Cliente from "../../../interface/cliente";
 import ReservaInterface from "../../../interface/reserva";
 import ReservaCard from "./reservaCard";
-import { RiArrowGoBackLine } from "react-icons/ri";
 import style from './style.module.css'
 
 export default function ReservaCliente() {

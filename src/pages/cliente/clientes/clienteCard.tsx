@@ -1,15 +1,15 @@
 import { useState } from "react";
 import Cliente from "../../../interface/cliente";
 import style from './style.module.css'
-import { GoTrash } from "react-icons/go";
-import { AiFillCaretRight, AiFillCaretDown } from "react-icons/ai";
-import { CiEdit } from "react-icons/ci";
+import * as GoIcons from "react-icons/go";
+import * as AiIcons from "react-icons/ai";
+import * as CiIcons from "react-icons/ci";
 import Button from "../../../components/button";
 
 interface ClienteCardProps {
     cliente: Cliente;
     onDelete: (id: number) => void
-  }
+}
 
 export default function ClienteCard({ cliente, onDelete }: ClienteCardProps) {
     const [clienteInfos, setCLienteInfos] = useState<boolean>(false)
@@ -36,25 +36,25 @@ export default function ClienteCard({ cliente, onDelete }: ClienteCardProps) {
                 </div>
                 <div className={style.icons}>
                     <a href={`cliente/editar/${cliente.id}`} className={style.link_editar}>
-                        <CiEdit 
+                        <CiIcons.CiEdit 
                             className={style.icon}
                             size={20} 
                             color="#2681AE" 
                         />
                     </a>
-                    <GoTrash 
+                    <GoIcons.GoTrash 
                         color="#f1a499" 
                         size={20} 
                         onClick={() => onDelete(cliente.id)}
                         className={style.icon}
                     />
                     {!clienteInfos ? (
-                        <AiFillCaretRight 
+                        <AiIcons.AiFillCaretRight 
                             onClick={() => setCLienteInfos(true)} 
                             className={style.icon}
                         />
                     ) : 
-                        <AiFillCaretDown 
+                        <AiIcons.AiFillCaretDown 
                             onClick={() => setCLienteInfos(false)} 
                             className={style.icon}
                         />

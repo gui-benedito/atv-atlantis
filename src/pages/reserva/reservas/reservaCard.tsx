@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import ReservaInterface from "../../../interface/reserva";
 import style from './style.module.css'
-import { AiFillCaretRight, AiFillCaretDown } from "react-icons/ai";
-import { GoTrash } from "react-icons/go";
+import * as AiIcons from "react-icons/ai";
+import * as GoIcons from "react-icons/go";
 
 interface ReservaCardProps {
     reservaSelected: ReservaInterface
@@ -42,7 +42,7 @@ export default function ReservaCard({reservaSelected, onDelete}: ReservaCardProp
                 </div>
                 <div className={style.icon_container}>
                     {onDelete && (
-                        <GoTrash 
+                        <GoIcons.GoTrash 
                             color="#f1a499" 
                             size={20} 
                             onClick={() => onDelete(reserva ? reserva.id : 0)}
@@ -50,12 +50,12 @@ export default function ReservaCard({reservaSelected, onDelete}: ReservaCardProp
                         />
                     )}
                     {!clienteInfos ? (
-                        <AiFillCaretRight 
+                        <AiIcons.AiFillCaretRight 
                             onClick={() => setCLienteInfos(true)} 
                             className={style.icon}
                         />
                     ) : 
-                        <AiFillCaretDown 
+                        <AiIcons.AiFillCaretDown 
                             onClick={() => setCLienteInfos(false)} 
                             className={style.icon}
                         />
